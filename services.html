@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Care & Nursing Services | Niharika Health Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        :root { 
+            --primary: #00509d; 
+            --secondary: #00a8cc; 
+            --accent: #e63946; 
+            --white: #ffffff; 
+            --light-bg: #f8fbff;
+        }
+        
+        body { background-color: var(--light-bg); color: #333; line-height: 1.6; }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo-container { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 80px; width: 80px; border-radius: 100%; object-fit: cover; margin-right: 15px; border: 2px solid var(--secondary); }
+        .logo-text { font-weight: 700; color: var(--primary); font-size: 1.2rem; }
+        .back-home { text-decoration: none; color: var(--secondary); font-weight: 600; }
+
+        /* Hero Section */
+        .service-hero {
+            background: linear-gradient(rgba(0, 80, 157, 0.9), rgba(0, 168, 204, 0.8)), 
+                        url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .service-hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .badge { background: var(--accent); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 600; display: inline-block; margin-bottom: 20px; animation: pulse 2s infinite; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Services Grid */
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 5%; }
+        .section-title { text-align: center; margin-bottom: 40px; color: var(--primary); }
+        
+        .services-list { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+        }
+        
+        .service-item { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 15px; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-left: 5px solid var(--secondary);
+        }
+        .service-item:hover { transform: translateX(10px); background: #f0f7ff; }
+        .service-item i { color: var(--secondary); font-size: 1.5rem; width: 30px; }
+        .service-item span { font-weight: 600; color: #444; }
+
+        /* Contact Section */
+        .contact-box {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .contact-grid { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-top: 30px; 
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            flex: 1 1 350px; /* Base size for cards */
+            max-width: 400px;
+        }
+        /* Forces the third card to take its own row and stay centered */
+        .contact-card.full-width {
+            flex: 0 1 350px;
+            margin-top: 10px;
+        }
+        .contact-card h4 { margin-bottom: 10px; font-size: 1.2rem; }
+        .contact-card a { color: var(--accent); font-size: 1.4rem; font-weight: 700; text-decoration: none; display: block; background: white; padding: 5px; border-radius: 8px; margin-top: 10px; }
+
+        .footer { text-align: center; padding: 40px; background: #eee; margin-top: 60px; color: #666; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .contact-grid { flex-direction: column; align-items: center; }
+            .contact-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="./image/n logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">NIHARIKA HEALTH CARE</span>
+        </div>
+        <a href="./dublicate.html" class="back-home"><i class="fas fa-home"></i> Back to Home</a>
+    </nav>
+
+    <header class="service-hero">
+        <span class="badge">Available 24/7 on Call</span>
+        <h1>Home Care & Nursing Services</h1>
+        <p>Professional medical care at the comfort of your home.</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Nursing Services Provided at Home</h2>
+        
+        <div class="services-list">
+            <div class="service-item"><i class="fas fa-syringe"></i><span>All Type Injection</span></div>
+            <div class="service-item"><i class="fas fa-kit-medical"></i><span>Enema & Dressing</span></div>
+            <div class="service-item"><i class="fas fa-vial"></i><span>Infusion (I.V.)</span></div>
+            <div class="service-item"><i class="fas fa-user-nurse"></i><span>Catheterization</span></div>
+            <div class="service-item"><i class="fas fa-wind"></i><span>Suctioning</span></div>
+            <div class="service-item"><i class="fas fa-file-medical"></i><span>Ryles Tube Insertion</span></div>
+            <div class="service-item"><i class="fas fa-heartbeat"></i><span>Vital Signs Checkup (T.P.R & BP)</span></div>
+            <div class="service-item"><i class="fas fa-users"></i><span>Nursing Staff & Attendant</span></div>
+        </div>
+
+        <div class="contact-box">
+            <h2>Need Immediate Assistance?</h2>
+            <p>Our professional staff is ready to help you anytime, anywhere.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Emergency Contact 1</h4>
+                    <a href="tel:+917240360830"><i class="fas fa-phone-alt"></i> +91 7240360830</a>
+                </div>
+
+                <div class="contact-card">
+                    <h4>Emergency Contact 2</h4>
+                    <a href="tel:+918690732656"><i class="fas fa-phone-alt"></i> +91 8690732656</a>
+                </div>
+
+                <div class="contact-card full-width">
+                    <h4>Emergency Contact 3</h4>
+                    <a href="tel:+91XXXXXXXXXX"><i class="fas fa-phone-alt"></i> +91 9079849174</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Niharika Health Care & Nursing Services. Providing quality care 24/7.</p>
+    </footer>
+
+</body>
+</html>

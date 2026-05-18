@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Machines | Niharika Health Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        :root { --primary: #00509d; --secondary: #00a8cc; --white: #ffffff; }
+        body { background-color: #f8fbff; color: #333; }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+        }
+
+        /* Updated Logo Section */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 100px; /* Logo ka size yahan se adjust karein */
+            width: auto;
+            margin-right: 12px;
+        }
+
+        .logo-text { 
+            font-weight: 700; 
+            color: var(--primary); 
+            font-size: 1.2rem; 
+            letter-spacing: 0.5px;
+        }
+
+        .back-home { 
+            text-decoration: none; 
+            color: var(--secondary); 
+            font-weight: 600; 
+            transition: 0.3s;
+        }
+        
+        .back-home:hover { color: var(--primary); }
+
+        /* Header Section */
+        .header-section {
+            text-align: center;
+            padding: 100px 5% 120px;
+            background: linear-gradient(135deg, #00509d, #00a8cc);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .header-section h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 15px; }
+        .header-section p { font-size: 1.1rem; opacity: 0.9; }
+
+        /* Machine Container */
+        .machine-container {
+            max-width: 1200px;
+            margin: -80px auto 50px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .machine-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 80, 157, 0.15);
+            transition: 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .machine-card:hover { transform: translateY(-15px); }
+
+        .img-box {
+            width: 100%;
+            height: 280px;
+            background: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+        /* Information Box */
+        .info-box { padding: 30px; text-align: center; flex-grow: 1; }
+        .info-box h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.6rem; }
+        .info-box p { color: #555; font-size: 1.05rem; line-height: 1.6; }
+
+        /* Footer */
+        .footer-simple { text-align: center; padding: 60px 5%; color: #666; background: #eef6fc; margin-top: 50px; }
+        .footer-simple h2 { color: var(--primary); margin-bottom: 10px; }
+
+        @media (max-width: 768px) {
+            .header-section { padding: 60px 5% 80px; }
+            .machine-container { margin-top: -40px; }
+            .logo-text { font-size: 1rem; }
+            .logo-img { height: 35px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo-container">
+            <img src="./image/n logo.png" alt="Niharika Logo" class="logo-img">
+            <span class="logo-text">NIHARIKA HEALTH CARE & TRAINING CENTER  </span>
+        </a>
+        <a href="./dublicate.html" class="back-home"><i class="fas fa-arrow-left"></i> Home</a>
+    </nav>
+
+    <div class="header-section">
+        <h1>Our Advanced Machines</h1>
+        <p>Technology that gives you relief from pain.</p>
+    </div>
+
+    <div class="machine-container">
+        
+        <div class="machine-card">
+            <div class="img-box">
+                <img src="./image/aculife.jpg" alt="Aculife Therapy">
+            </div>
+            <div class="info-box">
+                <h2>Aculife Machine</h2>
+                <p>Acupuncture without needles! It detects diseases through magnetic waves and cures them from the root.</p>
+            </div>
+        </div>
+
+        <div class="machine-card">
+            <div class="img-box">
+                <img src="./image/head care.jpg" alt="Head Care Therapy">
+            </div>
+            <div class="info-box">
+                <h2>Head Care Machine</h2>
+                <p>Best for high BP, headache, and fatigue. This machine provides instant relief by balancing the body's bio-electricity.</p>
+            </div>
+        </div>
+
+        <div class="machine-card">
+            <div class="img-box">
+                <img src="./image/bcm.jpg" alt="BCM Massager">
+            </div>
+            <div class="info-box">
+                <h2>BCM Machine</h2>
+                <p>Improves blood circulation throughout the body. Its vibration helps relieve old pain and clears blockages in the veins.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-simple">
+        <h2>Health is the greatest wealth</h2>
+        <p>At Niharika Health Care, we treat you using the latest technology.</p>
+        <p style="margin-top: 25px; font-size: 0.85rem; opacity: 0.7;">&copy; 2024 Niharika Health Care & Training Center. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
